@@ -23,6 +23,9 @@ jobs:
     - name: Instalar Dependencias
       run: composer install --prefer-dist --no-scripts --no-progress --no-suggest
 
+    - name: Generar clave de aplicación
+      run: php artisan key:generate
+
     - name: Verificar dependencias seguras
       run: composer require --dev roave/security-advisories:dev-latest --no-update
 
