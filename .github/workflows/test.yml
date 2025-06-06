@@ -23,6 +23,9 @@ jobs:
     - name: Instalar Dependencias
       run: composer install --prefer-dist --no-scripts --no-progress --no-suggest
 
+    - name: Copiar archivo .env.example a .env
+      run: cp .env.example .env
+
     - name: Generar clave de aplicación
       run: php artisan key:generate
 
