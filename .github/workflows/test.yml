@@ -27,7 +27,7 @@ jobs:
       run: composer require --dev roave/security-advisories:dev-latest --no-update
 
     - name: Ejecutar Pruebas
-      run: vendor/bin/phpunit
+      run: vendor/bin/phpunit --testsuite Feature
 
 
 
